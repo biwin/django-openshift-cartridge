@@ -23,49 +23,49 @@ Django on OpenShift is a independent fork of [openshift-django17] by [John Flynn
 - Install the RHC client tools if you have not already done so.
 
 
-    sudo gem install rhc
-    rhc setup
+    `sudo gem install rhc`
+    `rhc setup`
 
 
 - Create a Python 2.7 application
 
 
-    rhc app create django python-2.7
+    `rhc app create django python-2.7`
 
 
 - Add the database cartridge (choose one)
 
 
-    rhc add-cartridge postgresql-9.2 --app django
+    `rhc add-cartridge postgresql-9.2 --app django`
 
 OR
 
-    rhc add-cartridge mysql-5.5 --app django 
+    `rhc add-cartridge mysql-5.5 --app django`
 
 
 - Add this upstream repo
 
-
+```
     cd django
     git remote add upstream -m master https://github.com/biwin/Django-on-OpenShift.git
     git pull -s recursive -X theirs upstream master
-
+```
 
 - set the WSGI application to django's built in WSGI application (stored in the wsgi folder).
 
 
-    rhc env set OPENSHIFT_PYTHON_WSGI_APPLICATION=wsgi/wsgi.py --app django
+    `rhc env set OPENSHIFT_PYTHON_WSGI_APPLICATION=wsgi/wsgi.py --app django`
 
 
 - Push the repo upstream
 
 
-    git push
+    `git push`
 
 - SSH into the application to create a django superuser.
 
 
-    python app-root/repo/manage.py createsuperuser
+    `python app-root/repo/manage.py createsuperuser`
 
 
 - Now use your browser to connect to the Admin site.
