@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    {% block head %}
+
+
+    {% endblock %}
+    <style>
+        body{
+            background: {% load staticfiles %} url("{% static "demo/images/image.jpeg" %}") fixed;
+            background-size: cover;
+            padding: 5px;
+        }
+    </style>
+
+
+</head>
+<body>
+{% block content %}
+
+
+
+{% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script src="{% static 'demo/scripts/script.js' %}"></script>
+</body>
+</html>

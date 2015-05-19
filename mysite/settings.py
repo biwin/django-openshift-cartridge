@@ -36,6 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Demo app for OpenShift Django 1.8.x
+    'demo',
 )
 
 MIDDLEWARE_CLASSES = (

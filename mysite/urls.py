@@ -10,6 +10,9 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+
+    # urls for the Demo app, comment or remove the line to get started
+    url(r'^$', 'demo.views.home', name='home'),
 )
 
 

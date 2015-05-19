@@ -1,0 +1,57 @@
+    body{
+    	color: #fff;
+    }
+    .welcome-box{
+    	text-align: center;
+    }
+    #welcome{
+    	text-shadow: 1px 1px 1px black;
+    	letter-spacing: 1px;
+    	color: #fff;
+        font-size: 1.7em;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    }
+    .heading-box{
+    	top: 20px;
+    }
+    .tagline{
+
+		font-size: 2.5em;
+		text-shadow: 1px 1px 12px black;
+		font-family: 'Lobster', cursive;
+    }
+    .spec-detail{
+    	font-family: 'Inconsolata', sans-serif ;
+    	font-size: 1.2em;
+
+    }
+    .specs{
+    	text-align: center;
+    	padding: 5px;
+    	text-shadow: 1px 1px 1px black;
+    	line-height: 32px;
+    }
+    .version-number{
+    	background-color: #f1c40f;
+    	color: #000;
+    	padding: 5px;
+    	text-shadow: none;
+    }
+    .main-version{
+    	font-family:  serif;
+    }
+    header{
+    	height: 30px;
+    }
+    footer{
+    	height: 15px;
+	   	position:fixed;
+	   	left:0px;
+	   	bottom:0px;
+	   	width:100%;
+    	background-color: #000;
+    	font-size: .8em;
+    	padding-left: 5px;
+    }

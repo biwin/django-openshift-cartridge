@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Django on OpenShift</title>
+
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:bold" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static "demo/styles/style.css" %}"/>
+
+{% endblock %}
+
+
+{% block content %}
+<header>
+
+</header>
+<div class="container">
+    <div class="row-fluid">
+	    <div class="welcome-box">
+	    	<span id="welcome"> welcome
+		    </span> <br>
+	    	<span class="tagline">Django On OpenShift <br>
+	    	<span class="main-version">
+	    		v 2.0
+	    	</span></span>
+	    </div>
+
+	    <div class="specs">
+	    	<span class="spec-detail">
+	    		Python version:
+	    		<span class="version-number">
+	    			{{ python_version }}
+	    		</span>
+                <br>
+
+	    		Django version:
+
+	    		<span class="version-number">
+	    			{{ django_version }}
+	    		</span>
+	    	    <br>
+	    		PIP version: &nbsp;
+
+	    		<span class="version-number">
+	    			  {{ pip_version }}
+	    		</span>
+
+	    	</span>
+	    </div>
+    </div>
+</div>
+<footer>
+	a project maintained by  <a href="https://github.com/biwin"> biwin </a>.
+</footer>
+{% endblock %}
