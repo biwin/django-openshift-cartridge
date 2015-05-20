@@ -4,6 +4,6 @@
 # before the deploy step.  This script gets executed directly, so it
 # could be python, php, ruby, etc.
 
-# Activate VirtualEnv in order to use the correct libraries
+# Activate VirtualEnv in order to use the correct libraries.
 
-echo "--> ACTION HOOK: build <--"
+echo -e "---> \033[0;31m ACTION HOOK \033[0m:\033[46m \033[1;37m build \033[0m <---"
