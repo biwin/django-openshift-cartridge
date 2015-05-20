@@ -8,6 +8,15 @@
 {% load staticfiles %}
 <link rel="stylesheet" href="{% static "demo/styles/style.css" %}"/>
 
+
+<style>
+    body{
+        background: {% load staticfiles %} url("{% static "demo/images/image.jpeg" %}") fixed;
+        background-size: cover;
+        padding: 5px;
+    }
+</style>
+
 {% endblock %}
 
 
