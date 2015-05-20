@@ -4,7 +4,7 @@
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
 
-echo -e "---> \033[0;31m ACTION HOOK \033[0m:\033[46m \033[1;37m deploy \033[0m <---"
+echo -e "---> \033[0;31m ACTION HOOK \033[0m:\033[46m \033[1;37mdeploy \033[0m <---"
 
 
 echo -e '\033[0;32mactivating virtual environment . . . \033[0m'

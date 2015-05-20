@@ -3,4 +3,4 @@
 # is deployed and started.  This script gets executed directly, so 
 # it could be python, php, ruby, etc.
 
-echo -e "---> \033[0;31m ACTION HOOK \033[0m:\033[46m \033[1;37m post_deploy \033[0m <---"
+echo -e "---> \033[0;31m ACTION HOOK \033[0m:\033[46m \033[1;37mpost_deploy \033[0m <---"

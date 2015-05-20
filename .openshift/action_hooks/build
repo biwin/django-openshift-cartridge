@@ -6,4 +6,4 @@
 
 # Activate VirtualEnv in order to use the correct libraries.
 
-echo -e "---> \033[0;31m ACTION HOOK \033[0m:\033[46m \033[1;37m build \033[0m <---"
+echo -e "---> \033[0;31m ACTION HOOK \033[0m:\033[46m \033[1;37mbuild \033[0m <---"
