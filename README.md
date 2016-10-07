@@ -1,6 +1,8 @@
-Django on OpenShift v3.0 (Django>=1.10+, <=1.11)
+Django on OpenShift v3.0
 ===
 
+
+![Django on OpenShift 1.10](https://raw.githubusercontent.com/biwin/Django-on-OpenShift/master/static/demo/images/screenshot.v3.png) <br>
 Django on OpenShift is a independent fork of [openshift-django17] by [John Flynn Matthew].
 
 
