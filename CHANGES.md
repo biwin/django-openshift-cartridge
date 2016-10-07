@@ -4,6 +4,10 @@ Changelog for Django on Openshift
 This Project is a fork of [openshift-django17] by [John Flynn Matthew].
 For the license and more details, read the README.md file.
 
+###Version 3.0 - Django 1.10. Yay!!
+* Adds support to Django 1.10+
+
+
 ###Version 2.0 - Say Hi to `Django on OpenShift`; a seperate, fun filled fork!
 * Adds support to Django 1.8.x LTS
 * Introduces a unpluggable demo app.
