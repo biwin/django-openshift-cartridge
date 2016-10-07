@@ -6,21 +6,25 @@ Django on OpenShift is a independent fork of [openshift-django17] by [John Flynn
 
 ### QuickLinks
 Previous versions and supported Django versions <br>
-[v3 (Django1.10)](https://github.com/biwin/Django-on-OpenShift/) <br>
-[v2 (Django1.8 LTS)](https://github.com/biwin/Django-on-OpenShift/tree/f7eddd3b709e58d6ff1af44e4ae7ae84e52740f4)
+<br>
 
+
+|Version|Django Version|Tag|Browse|
+|---|---|---|---|
+|3|1.10|`v3`|[v3](https://github.com/biwin/Django-on-OpenShift/)|
+|2|1.8 LTS|`v2`|[v2](https://github.com/biwin/Django-on-OpenShift/tree/f7eddd3b709e58d6ff1af44e4ae7ae84e52740f4)|
 
 ###Features
 * Ready to use for local development
-* Easy to push to Openshift
+* Easy to push to OpenShift
 * Works with  either PostgreSQL or MySQL
-* Minimal changes to default django 1.8.x LTS installation
+* Minimal changes to default django 1.10.x LTS installation
 * Support to new template configurations for Django 1.8.x LTS
-* Support for multiple tempate engines
-* Uses new folder layout from Openshift March 2014 release
-* Allows for debug mode on Openshift with the help of an environment variable.
+* Support for multiple template engines
+* Uses new folder layout from OpenShift March 2014 release
+* Allows for debug mode on OpenShift with the help of an environment variable.
 * Use of static files is pre-configured
-* Preloaded Bootstrap and jQuery cdn versions
+* Preloads Bootstrap and jQuery cdn versions
 * New Demo app to display software information
 * Code formatting as per PEP8 recommendations
 
@@ -78,24 +82,24 @@ OR
 - Now use your browser to connect to the Admin site.
 
 ### Static files
-Static files are already setup and ready to use for either local or Openshift use. 
+Static files are already setup and ready to use for either local or OpenShift use.
 
-Place all static files / folders into the project-directory/static.  They will be collected with collectstatic when 
-pushed to openshift.
+Place all static files / folders into the project-directory/static.  They will be collected with `collectstatic` when
+pushed to OpenShift.
 
-**DO NOT PUT STATIC FILES INTO /wsgi/static/**, this is merely a place holder for the collectstatic command.
+**DO NOT PUT STATIC FILES INTO /wsgi/static/**, this is merely a place holder for the `collectstatic` command.
 
 ### Where do I put my HTML Templates?
-You are free to place the HTML template files either on the seperate template directory or in-app template directory or
+You are free to place the HTML template files either on the separate template directory or in-app template directory or
  on both.
 Your HTML templates can be placed on,
 
- * `project/template`
- * `project/app/template`
+ * `project/templates`
+ * `project/app/templates`
 
 
 ### Running locally and the django tutorial
-This repository was designed to allow you to quickly develop and deploy a website to Openshift.  For local development, make sure you have the following setup:
+This repository was designed to allow you to quickly develop and deploy a website to OpenShift.  For local development, make sure you have the following setup:
 
 - Virtualenv for this instance of python / django.
 - pip (should be installed with virtualenv)
@@ -109,18 +113,18 @@ Once you have those installed, install the requirements for this repository:
 Once you have django installed, you can continue the tutorial from here https://docs.djangoproject.com/en/1.7/intro/tutorial01/#database-setup, although the default database and application configuration should be sufficient.
 
 ### Configuration details
-When a git push is done, the .openshift/action_hooks/deploy is executed.  This script does two things:
+When a git push is done, the ``.openshift/action_hooks/deploy` is executed.  This script does two things:
 
 1.  Runs python manage.py migrate to update any changes to the Schema
-2.  Runs python manage.py collectstatic to move all necessary static files into /wsgi/static
+2.  Runs python manage.py `collectstatic` to move all necessary static files into /wsgi/static
 
-#### Debugging mode and Openshift
-By default, debug mode is off when pushed to Openshift.  However, if you'd like to turn on debugging (settings.DEBUG) while running on Openshift, you can set the environment variable DEBUG to True and then stop and start your application, and debugging will be turned on.
+#### Debugging mode and OpenShift
+By default, debug mode is off when pushed to OpenShift.  However, if you'd like to turn on debugging (settings.DEBUG) while running on OpenShift, you can set the environment variable DEBUG to True and then stop and start your application, and debugging will be turned on.
 
     rhc env set DEBUG=True
 
 ### HTTPS redirection
-HTTPS redirection is accompished by telling the local Apache gear to redirect all traffic to the HTTPS version of your site.  You'll need to add an .htaccess file into the WSGI folder
+HTTPS redirection is accomplished by telling the local Apache gear to redirect all traffic to the HTTPS version of your site.  You'll need to add an .htaccess file into the WSGI folder
 
 Add the following .htaccess file into the WSGI folder
 
