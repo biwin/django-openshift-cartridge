@@ -34,8 +34,6 @@ DEBUG = DEBUG or 'DEBUG' in os.environ
 if ON_PAAS and DEBUG:
     print("*** Warning - Debug mode is on ***")
 
-TEMPLATE_DEBUG = True
-
 if ON_PAAS:
     ALLOWED_HOSTS = [os.environ['OPENSHIFT_APP_DNS'], socket.gethostname()]
 else:
@@ -76,6 +74,7 @@ TEMPLATES = [
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
+            'debug': DEBUG,
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
